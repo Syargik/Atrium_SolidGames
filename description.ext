@@ -1,0 +1,30 @@
+corpseLimit = 300;
+corpseRemovalMaxTime = 10000;
+wreckLimit = 300;
+wreckRemovalMaxTime = 10000;
+forceRotorLibSimulation = 0;
+
+#include "A3A_SETUP\a3a_header.hpp"
+#include "mission_description.hpp"
+#include "A3A_SETUP\a3a_parameters.hpp"
+
+class A3A_MissionParams {
+	#include "mission_parameters.hpp"
+};
+
+class CfgFunctions
+{
+    class mis
+    {
+        class Main
+        {
+            file="mis_funcs";
+            class preinit
+            {
+                preInit=1;
+                postInit=0;
+            };
+
+        };
+    };
+};

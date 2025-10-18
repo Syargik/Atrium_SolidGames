@@ -1,0 +1,1 @@
+#define A3A_MODULES ["AddonsCheck"]
