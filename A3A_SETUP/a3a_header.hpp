@@ -16,4 +16,3 @@ debriefing = 1;
 briefing = 1;
 aiKills = 0;
 joinUnassigned = 1;
-disableChannels[] = {0};
