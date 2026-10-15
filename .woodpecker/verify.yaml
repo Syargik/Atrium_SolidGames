@@ -1,0 +1,13 @@
+when:
+  - event: [push, pull_request, manual]
+labels:
+  pool: linux
+steps:
+  - name: verify
+    image: alpine:3.23
+    commands:
+      - "apk add --no-cache git tar"
+      - "git fsck --full"
+      - "git archive --format=tar.gz --output=/tmp/source.tar.gz HEAD"
+      - "tar -tzf /tmp/source.tar.gz >/dev/null"
+      - "sha256sum /tmp/source.tar.gz"
